@@ -3,6 +3,7 @@ void setup()
   size(500, 500);
 
   clouds = new Clouds();
+  player = new Player();
 
 
   x = width ;
@@ -16,6 +17,7 @@ float yspeed = 0;
 
 
 Clouds clouds;
+Player player;
 
 
 
@@ -28,6 +30,7 @@ void draw()
   fill(197, 201, 197);
   ellipse(x, y, 120, 25);
   ellipse(x + 10, y, 25, 80);
+  ellipse(x - 55, y - 10, 15, 25);
   fill(0);
   //Windows
   rect(x + 20, y-5, 10, 10);
@@ -53,5 +56,6 @@ void draw()
 
   clouds.update();
   clouds.render();
+  player.render();
 }
 
