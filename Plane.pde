@@ -2,7 +2,7 @@ class Plane
 {
   boolean box = false;
   float boxX = width/2;
-  float boxY = 250;
+  float boxY = y;
   float xspeed = 2;
 
   void update()
@@ -26,9 +26,8 @@ class Plane
     if (box == true)
     {
      rect(boxX,boxY,15,15);
+     boxY ++;
     }
-    
-    
     
     //plane
     fill(197, 201, 197);
