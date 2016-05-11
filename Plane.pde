@@ -1,15 +1,35 @@
 class Plane
 {
-  
+  boolean box = false;
+  float boxX = width/2;
+  float boxY = 250;
   float xspeed = 2;
-  
+
   void update()
   {
-  x += xspeed;
+    if (keyPressed)
+    {
+      if (key == ' ')
+      {
+        box = true;
+        // rect(boxX,boxY,15,15);
+      }
+    }
 
+    x += xspeed;
   }
+
+
   void render()
   {
+    
+    if (box == true)
+    {
+     rect(boxX,boxY,15,15);
+    }
+    
+    
+    
     //plane
     fill(197, 201, 197);
     ellipse(x, y, 120, 25);
