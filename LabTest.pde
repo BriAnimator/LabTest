@@ -22,6 +22,7 @@ Clouds clouds;
 void draw()
 {
 
+
   background(44, 151, 255);
   //plane
   fill(197, 201, 197);
@@ -43,6 +44,7 @@ void draw()
   x += xspeed;
   y += yspeed;
 
+  //Wrapping 
   if (x >= 550)
   {
     xspeed *= 1;
@@ -50,5 +52,6 @@ void draw()
   }
 
   clouds.update();
+  clouds.render();
 }
 
